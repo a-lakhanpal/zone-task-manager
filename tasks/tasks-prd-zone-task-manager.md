@@ -27,7 +27,7 @@
 
 ## Tasks
 
-- [ ] 1.0 Set up integration foundation and core infrastructure
+- [x] 1.0 Set up integration foundation and core infrastructure
   - [x] 1.1 Create the basic folder structure for `custom_components/zone_task_manager/`
   - [x] 1.2 Create `manifest.json` with required fields (domain, name, version, dependencies, codeowners)
   - [x] 1.3 Create `__init__.py` with basic async_setup_entry and async_unload_entry functions

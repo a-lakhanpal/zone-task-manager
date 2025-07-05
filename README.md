@@ -39,7 +39,7 @@ Platform | Description
 2. Go to "Integrations" section
 3. Click the three dots in the top right corner
 4. Select "Custom repositories"
-5. Add this repository URL: `https://github.com/yourusername/zone-task-manager`
+5. Add this repository URL: `https://github.com/a-lakhanpal/zone-task-manager`
 6. Select "Integration" as the category
 7. Click "Add"
 8. Search for "Zone Task Manager" and install it
@@ -262,11 +262,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-[zone-task-manager]: https://github.com/yourusername/zone-task-manager
-[commits-shield]: https://img.shields.io/github/commit-activity/y/yourusername/zone-task-manager.svg?style=for-the-badge
-[commits]: https://github.com/yourusername/zone-task-manager/commits/main
+[zone-task-manager]: https://github.com/a-lakhanpal/zone-task-manager
+[commits-shield]: https://img.shields.io/github/commit-activity/y/a-lakhanpal/zone-task-manager.svg?style=for-the-badge
+[commits]: https://github.com/a-lakhanpal/zone-task-manager/commits/main
 [hacs]: https://github.com/hacs/integration
 [hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
-[license-shield]: https://img.shields.io/github/license/yourusername/zone-task-manager.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/yourusername/zone-task-manager.svg?style=for-the-badge
-[releases]: https://github.com/yourusername/zone-task-manager/releases 
+[license-shield]: https://img.shields.io/github/license/a-lakhanpal/zone-task-manager.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/a-lakhanpal/zone-task-manager.svg?style=for-the-badge
+[releases]: https://github.com/a-lakhanpal/zone-task-manager/releases 
