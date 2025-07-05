@@ -1,0 +1,260 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Zone Task Manager Setup",
+        "description": "Configure the Zone Task Manager integration to organize and track home maintenance tasks.",
+        "data": {
+          "name": "Name",
+          "notification_enabled": "Enable daily task notifications",
+          "notification_time": "Daily notification time (HH:MM)",
+          "weekly_summary": "Enable weekly summaries",
+          "monthly_summary": "Enable monthly summaries"
+        }
+      },
+      "zones": {
+        "title": "Select Zones",
+        "description": "Select which Home Assistant areas to use as zones for task management.",
+        "data": {
+          "zones": "Available zones"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_time": "Invalid time format. Please use HH:MM (24-hour format)",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "Zone Task Manager is already configured",
+      "no_areas": "No areas found in Home Assistant. Please create areas first."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Zone Task Manager Options",
+        "description": "Adjust your Zone Task Manager settings.",
+        "data": {
+          "notification_enabled": "Enable daily task notifications",
+          "notification_time": "Daily notification time (HH:MM)",
+          "weekly_summary": "Enable weekly summaries",
+          "monthly_summary": "Enable monthly summaries",
+          "overdue_threshold_days": "Days before marking tasks as overdue"
+        }
+      }
+    },
+    "error": {
+      "invalid_time": "Invalid time format. Please use HH:MM (24-hour format)",
+      "invalid_threshold": "Overdue threshold must be a positive number"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "total_tasks": {
+        "name": "Total Tasks"
+      },
+      "pending_tasks": {
+        "name": "Pending Tasks"
+      },
+      "overdue_tasks": {
+        "name": "Overdue Tasks"
+      },
+      "today_tasks": {
+        "name": "Tasks Due Today"
+      },
+      "completed_today": {
+        "name": "Tasks Completed Today"
+      },
+      "completion_rate": {
+        "name": "Task Completion Rate"
+      }
+    },
+    "calendar": {
+      "task_calendar": {
+        "name": "Task Calendar"
+      }
+    }
+  },
+  "services": {
+    "create_task": {
+      "name": "Create Task",
+      "description": "Create a new task in a specific zone.",
+      "fields": {
+        "zone_id": {
+          "name": "Zone",
+          "description": "The zone where the task should be created."
+        },
+        "title": {
+          "name": "Title",
+          "description": "The title of the task."
+        },
+        "description": {
+          "name": "Description",
+          "description": "Detailed description of the task (optional)."
+        },
+        "notes": {
+          "name": "Notes",
+          "description": "Additional notes for the task (optional)."
+        },
+        "schedule_type": {
+          "name": "Schedule Type",
+          "description": "How often the task should recur."
+        },
+        "schedule_interval": {
+          "name": "Interval",
+          "description": "Interval for custom scheduling."
+        }
+      }
+    },
+    "complete_task": {
+      "name": "Complete Task",
+      "description": "Mark a task as completed.",
+      "fields": {
+        "task_id": {
+          "name": "Task ID",
+          "description": "The ID of the task to complete."
+        },
+        "notes": {
+          "name": "Completion Notes",
+          "description": "Optional notes about the completion."
+        }
+      }
+    },
+    "update_task": {
+      "name": "Update Task",
+      "description": "Update an existing task.",
+      "fields": {
+        "task_id": {
+          "name": "Task ID",
+          "description": "The ID of the task to update."
+        },
+        "title": {
+          "name": "Title",
+          "description": "New title for the task (optional)."
+        },
+        "description": {
+          "name": "Description",
+          "description": "New description for the task (optional)."
+        },
+        "notes": {
+          "name": "Notes",
+          "description": "New notes for the task (optional)."
+        }
+      }
+    },
+    "delete_task": {
+      "name": "Delete Task",
+      "description": "Delete a task permanently.",
+      "fields": {
+        "task_id": {
+          "name": "Task ID",
+          "description": "The ID of the task to delete."
+        }
+      }
+    },
+    "create_zone": {
+      "name": "Create Zone",
+      "description": "Create a custom zone for task management.",
+      "fields": {
+        "name": {
+          "name": "Zone Name",
+          "description": "Name of the new zone."
+        },
+        "description": {
+          "name": "Description",
+          "description": "Description of the zone (optional)."
+        },
+        "icon": {
+          "name": "Icon",
+          "description": "MDI icon name for the zone (optional)."
+        }
+      }
+    },
+    "update_zone": {
+      "name": "Update Zone",
+      "description": "Update an existing zone.",
+      "fields": {
+        "zone_id": {
+          "name": "Zone ID",
+          "description": "The ID of the zone to update."
+        },
+        "name": {
+          "name": "Zone Name",
+          "description": "New name for the zone (optional)."
+        },
+        "description": {
+          "name": "Description",
+          "description": "New description for the zone (optional)."
+        },
+        "enabled": {
+          "name": "Enabled",
+          "description": "Whether the zone is enabled."
+        }
+      }
+    },
+    "delete_zone": {
+      "name": "Delete Zone",
+      "description": "Delete a custom zone and all its tasks.",
+      "fields": {
+        "zone_id": {
+          "name": "Zone ID",
+          "description": "The ID of the zone to delete."
+        }
+      }
+    },
+    "backup_data": {
+      "name": "Backup Data",
+      "description": "Create a backup of all zones and tasks.",
+      "fields": {
+        "include_completed": {
+          "name": "Include Completed Tasks",
+          "description": "Include completed tasks in the backup."
+        }
+      }
+    },
+    "restore_data": {
+      "name": "Restore Data",
+      "description": "Restore zones and tasks from a backup.",
+      "fields": {
+        "backup_data": {
+          "name": "Backup Data",
+          "description": "JSON backup data to restore."
+        },
+        "merge": {
+          "name": "Merge Data",
+          "description": "Merge with existing data instead of replacing."
+        }
+      }
+    },
+    "send_summary": {
+      "name": "Send Summary",
+      "description": "Manually send a task summary notification.",
+      "fields": {
+        "summary_type": {
+          "name": "Summary Type",
+          "description": "Type of summary to send (daily, weekly, or monthly)."
+        }
+      }
+    }
+  },
+  "selector": {
+    "schedule_type": {
+      "options": {
+        "once": "Once",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "custom": "Custom"
+      }
+    },
+    "summary_type": {
+      "options": {
+        "daily": "Daily Summary",
+        "weekly": "Weekly Summary",
+        "monthly": "Monthly Summary"
+      }
+    }
+  }
+} 

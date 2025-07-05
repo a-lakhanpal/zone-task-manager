@@ -1,0 +1,10 @@
+{
+  "name": "Zone Task Manager",
+  "content_in_root": false,
+  "render_readme": true,
+  "homeassistant": "2023.1.0",
+  "hacs": "1.32.0",
+  "filename": "zone_task_manager.zip",
+  "zip_release": false,
+  "country": ["US", "GB", "CA", "AU", "NZ", "DE", "FR", "ES", "IT", "NL", "SE", "NO", "DK", "FI", "PL", "CZ", "SK", "HU", "RO", "BG", "GR", "PT", "BE", "AT", "CH", "IE", "LU"]
+} 
