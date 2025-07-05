@@ -1,9 +1,10 @@
 # Development and internal files
-create-prd.mdc
-generate-tasks.mdc
-process-task-list.mdc
-tasks/
-DEVELOPMENT.md
+*.mdc
+dev-docs/
+internal/
+docs/internal/
+.dev/
+dev/
 
 # Python
 __pycache__/
